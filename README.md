@@ -1,0 +1,1 @@
+This is a tutorial course by Brad Traversy I chose to do to learn SQL + Sequilize on Node. I'm familiar with SQL but never built it in a web development environment, only as a tool to make queries and reports.
