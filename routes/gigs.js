@@ -17,16 +17,8 @@ Gig.findAll()
 router.get('/add', (req, res) => res.render('add'))
 
 //Add a gig
-router.get('/add', (req, res) =>{
-    const data = {
-        title: 'Looking for a Wordpress Developer.',
-        technologies: 'wordpress, php, html, css',
-        budget: '$1000',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempore sapiente corrupti laborum culpa, quaerat inventore dolores iste facilis, veniam cumque sunt quam, consequatur explicabo.",
-        contact_email: 'user2@gmail.com'
-    }
-
-    let { title, technologies, budget, description, contact_email } = data;
+router.post('/add', (req, res) =>{
+    let { title, technologies, budget, description, contact_email } = req.body;
 
     //Insert into the table
     Gig.create({
